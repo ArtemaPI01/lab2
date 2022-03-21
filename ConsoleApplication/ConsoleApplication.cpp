@@ -6,6 +6,7 @@
 #include "Shop.h"
 #include "Owner.h"
 #include "Security.h"
+#include "Warehouse.h"
 
 int main()
 {
@@ -14,6 +15,7 @@ int main()
     Shop shop;
     Owner owner;
     Security security;
+    Warehouse warehouse;
     char fio[] = "Евгений";
     shop = enterShop();
     printShop(shop);
@@ -22,5 +24,9 @@ int main()
     printOwner(owner);
     security = enterSecurity();
     printSecurity(security);
+    warehouse = enterWarehouse();
+    printWarehouse(warehouse);
+    cloakWarehouse(warehouse, 100);
+
     _getch();
 }
