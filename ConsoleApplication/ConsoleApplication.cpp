@@ -7,6 +7,7 @@
 #include "Owner.h"
 #include "Security.h"
 #include "Warehouse.h"
+#include "Boxoffice.h"
 
 int main()
 {
@@ -16,6 +17,7 @@ int main()
     Owner owner;
     Security security;
     Warehouse warehouse;
+    Boxoffice boxoffice;
     char fio[] = "Евгений";
     shop = enterShop();
     printShop(shop);
@@ -27,6 +29,8 @@ int main()
     warehouse = enterWarehouse();
     printWarehouse(warehouse);
     cloakWarehouse(warehouse, 100);
-
+    boxoffice = createBoxoffice(10, 7, fio);
+    printBoxoffice(boxoffice);
+    printf("\nВремя обслуживания 100 клиентов - %d минуты\n", cloakBoxoffice(boxoffice, 100));
     _getch();
 }
